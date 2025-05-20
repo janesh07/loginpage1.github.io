@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Login Page</title>
+</head>
+<body>
+  <form id="loginForm" onsubmit="return validateForm()">
+    <label for="username">Username:</label><br>
+    <input type="text" id="username" name="username"><br><br>
+
+    <label for="password">Password:</label><br>
+    <input type="password" id="password" name="password"><br><br>
+
+    <input type="submit" value="Login">
+  </form>
+
+  <script>
+    function validateForm() {
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
+
+      if (username === "janesh" || password === "12345") {
+        alert("Username and password must be filled out");
+        return false;
+      }
+
+      // Add more validation rules if needed, e.g., password length
+      return true;
+    }
+  </script>
+</body>
+</html>
